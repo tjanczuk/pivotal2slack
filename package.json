@@ -1,0 +1,37 @@
+{
+  "name": "pivotal2slack",
+  "author": {
+    "name": "Tomasz Janczuk <tomasz@janczuk.org>",
+    "url": "https://tomasz.janczuk.org",
+    "twitter": "tjanczuk"
+  },
+  "version": "1.0.0",
+  "description": "Auth0 Webtask.io Slack Webhook for Pivotaltracker",
+  "tags": [
+    "nodejs",
+    "webtask",
+    "auth0",
+    "nodejs",
+    "node",
+    "slack",
+    "pivotal",
+    "pivotaltracker",
+    "webhook"
+  ],
+  "engines": {
+    "node": ">= 0.12.x"
+  },
+  "devDependencies": {
+    "superagent": "^1.8.3",
+    "dotenv": "^2.0.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "bugs": {
+    "url": "http://github.com/tjanczuk/pivotal2slack/issues"
+  }
+}
