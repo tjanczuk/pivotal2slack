@@ -1,7 +1,7 @@
 Auth0 Webtask.io Slack Webhook for Pivotaltracker
 ===
 
-This project uses [Auth0 Webtasks](https://webtask.io) to send a notification to Slack as a result of a change in your [PivotalTracker](https://pivotaltracker.com) board. For example, if a comment is added to a Pivotaltracker story, this is what you will see in Slack: 
+This project uses [Auth0 Webtasks](https://webtask.io) to send a notification to Slack every time something changes in your [PivotalTracker](https://pivotaltracker.com) board. For example, if a comment is added to a Pivotaltracker story, this is what you will see in Slack: 
 
 ![image](https://cloud.githubusercontent.com/assets/822369/14529710/3b52f3d6-022c-11e6-8c22-6d0e6c45b40d.png)
 
