@@ -3,19 +3,26 @@ Auth0 Webtask.io Slack Webhook for Pivotaltracker
 
 This project uses [Auth0 Webtasks](https://webtask.io) to send a notification to a Slack as a result of a change in your [PivotalTracker](https://pivotaltracker.com) board. For example, if a comment is added to a Pivotaltracker story, this is what you will see in Slack: 
 
+![image](https://cloud.githubusercontent.com/assets/822369/14529710/3b52f3d6-022c-11e6-8c22-6d0e6c45b40d.png)
+
 ## TL;DR;
 
 ```bash
 npm install -g wt-cli
 wt init
-wt create https://.... --capture \
+wt create https://raw.githubusercontent.com/tjanczuk/pivotal2slack/master/pivotal2slack.js \
+  --capture --prod \
   --name pivotal2slack \
   --secret SLACK_TOKEN={your_slack_token} \
   --secret SLACK_CHANNEL={your_slack_channel_id} \
   --secret AUTH={random_key}
 ``` 
 
-Take the resulting URL, append `auth={random_key}` URL query parameter, and install it as an Activity Webhook through settings in your Pivotaltracker project. 
+Take the resulting URL, append `auth={random_key}` URL query parameter, and install it as an Activity Webhook through settings in your Pivotaltracker project. The URL may look like this: 
+
+```
+https://webtask.it.auth0.com/api/run/wt-foobar/pivotal2slack?auth=abc123
+```
 
 ## Gotchas
 
@@ -32,7 +39,7 @@ Take the resulting URL, append `auth={random_key}` URL query parameter, and inst
 You can test the integration locally before installing it in Pivotaltracker: 
 
 ```bash
-git clone ...
+git clone https://github.com/tjanczuk/pivotal2slack.git
 cd pivotal2slack
 npm i
 SLACK_TOKEN={your_slack_token} SLACK_CHANNEL={your_slack_channel_id} node pivotal2slack.js
